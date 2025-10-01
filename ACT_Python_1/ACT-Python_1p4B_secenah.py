@@ -1,3 +1,20 @@
+# Activity Python 1: Task 4
+# File: ACT-Python_1p4B_secenah.py 
+# Date:    10/3/2025
+# By:      Ahmed Secen
+# Section: 018
+# Team:    2
+# 
+# ELECTRONIC SIGNATURE
+# Ahmed Secen
+#
+# The electronic signature above indicates the script
+# submitted for evaluation is my individual work, and I
+# have a general understanding of all aspects of its
+# development and execution.
+#
+# This script computes the heat transfer in a building relative to the outside temperature given the user's inputs.
+
 import math
 
 T_H = (
