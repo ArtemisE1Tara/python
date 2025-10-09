@@ -1,3 +1,5 @@
-test = 1.271e-5
+import math
 
-print('{0:0.9f}' .format(test))
+test = math.log(10)
+
+print(test)
