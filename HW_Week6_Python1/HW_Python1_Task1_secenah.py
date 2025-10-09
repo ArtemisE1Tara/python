@@ -31,14 +31,14 @@ degrees = (
 radians = math.radians(degrees)
 
 p = (
-    round(A*math.cos(degrees),1) #simple harmonic motion equations should normally use radians but not in this case
-                                #round to 1 decimal place
+    A*math.cos(degrees) #simple harmonic motion equations should normally use radians but not in this case
+                                
 )
 
 PE_t = round(0.5*K*(p**2)) #round output to nearest whole number
 
 print(
-    'Potential Energy: ',(PE_t),'J\n',
-    'Displacement: ',(p),'m'
+    f'Potential Energy: {PE_t} J\n',
+    f'Displacement: {p:0.1f} m'
 )
 
