@@ -6,5 +6,3 @@ if x>1:
 elif x==1:
     y = round((float(math.log((x+4)))),4)
     print(f'{y}')
-else:
-    print('Under construction')
