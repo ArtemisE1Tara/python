@@ -97,3 +97,12 @@ Low Precedence:
 - >>> n = 'Bilbo baggins'
 - >>> print('{0} is {1} years old and {2:0.2f} m tall.\n'.format(n,a,h))
 - Note: {2:0.2f} tells the float value of 'h' at index=2 to use two decimal places instead of the default one decimal place.
+
+# Conditional flow
+- # Operators
+- equal: ==
+- not equal: !=
+- greater than: >
+- less than: <
+- greater than or equal to: >=
+- less than or equal to: <=
