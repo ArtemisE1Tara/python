@@ -19,13 +19,17 @@
 
 import math
 
+#define user inputs as floats
 V = float(input('Input vehicle speed in mph: '))
 f = float(input('Input coefficient of friction: '))
-G = float(input('Input grade as a percentage: '))/100
+G = float(input('Input grade: '))
 T_r = float(input('Input reaction time in seconds: '))
+#define incline as a string 
 incline = str(input('Input direction of incline (-)=downhill and (+)=uphill: '))
 class Solution:
+    #define method for when the driver is going downhill
     def distanceDownhill(self):
+        #checks for invalid values
         if V<0 or V>200:
             return('Invalid speed')
         elif f<0 or f>1:
@@ -36,14 +40,13 @@ class Solution:
             return('Invalid reaction time')
         else:
             S = (
-                (
-                    (V**2)/(29.84*(f-G))
-                ) + (1.4678*V*T_r)
+                round((((V**2)/(29.84*(f-G))) + (1.4678*V*T_r)), 3) #round to 3 decimal places
             )
             return(f'Stopping distance: {S}ft')
             
-        
+    #define method for when the driver is going uphill
     def distanceUphill(self): 
+        #checks for invalid values
         if V<0 or V>200:
             return('Invalid speed')
         elif f<0 or f>1:
@@ -54,12 +57,11 @@ class Solution:
             return('Invalid reaction time')
         else:
             S = (
-                (
-                    (V**2)/(29.84*(f+G))
-                ) + (1.4678*V*T_r)
+                round((((V**2)/(29.84*(f+G))) + (1.4678*V*T_r)), 3) #round to 3 decimal places
             )
             return(f'Stopping distance: {S}ft')
 
+    #define method for determining which equation to use based on incline
     def incline(self, incline: str):
         if incline=='-':
             return(Solution().distanceDownhill())
@@ -68,5 +70,6 @@ class Solution:
         else:
             return('Invalid incline direction')
         
+#print output result with 'incline' as an argument
 print(Solution().incline(incline))
 
