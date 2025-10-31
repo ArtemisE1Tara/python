@@ -21,21 +21,21 @@ x = float(input("Enter a number to find the factorial of: "))
 
 class Solution:
     def Factorial(self):
-        i = 0
-        factorial = 0
+        i = 1
+        factorial = 1
         if x<0:
             return('Invalid input: must be a positive value')
         elif x==0:
             return('Factorial: 1')
         elif x.is_integer():
-            while i<x:
-                factorial = x*i
+            while i<=x:
+                factorial = factorial*i
                 i = i+1
             else:
                 return(factorial)
         else:
             return(f'Invalid input: must be an integer value.')
 
-print(Solution().Factorial())
+print(f'Factorial of {x}: {Solution().Factorial()}')
             
             
