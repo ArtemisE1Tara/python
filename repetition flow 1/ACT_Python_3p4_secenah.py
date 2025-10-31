@@ -1,8 +1,11 @@
 import random
 
-player1 = input('Player 1 name:')
-player2 = input('Player 2 name:')
-x = float(input('Number of rounds to be played:'))
+#player1 = input('Player 1 name: ')
+#player2 = input('Player 2 name: ')
+player1 = 'tessa'
+player2 = 'nick'
+x = 1687
+#x = float(input('Number of rounds to be played: '))
 
 roundCount = 0
 player_1_winCount = 0
