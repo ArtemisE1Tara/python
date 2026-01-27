@@ -21,9 +21,12 @@ class Solution:
         
         failCount = 0
         for x in range(simNum+1):
+            simFail = 0
             for y in range(len(compRel)):
                 if compRel[y]<random.random():
-                    failCount = failCount + 1
+                    simFail = 1
+            if simFail == 1:
+                failCount = failCount + 1
         
         percentFail = (failCount/simNum)*100
 
